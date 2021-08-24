@@ -1,0 +1,157 @@
+###
+# Two pairs of each service are defined here, for production and staging.
+###
+
+services:
+  # Backend prod
+  - type: pserv
+    name: backend
+    env: docker
+    numInstances: 1
+    dockerfilePath: ./docker/backend/Dockerfile
+    dockerContext: .
+    envVars:
+      - fromGroup: hasura-secrets
+      - fromGroup: discord-secrets
+      - fromGroup: github-secrets
+      - fromGroup: backend-secrets
+      - key: SOURCECRED_LEDGER_BRANCH
+        value: master
+      - key: GRAPHQL_HOST
+        fromService:
+          name: hasura
+          type: web
+          property: host
+
+  # Backend staging
+  - type: pserv
+    name: staging-backend
+    env: docker
+    branch: develop
+    numInstances: 1
+    dockerfilePath: ./docker/backend/Dockerfile
+    dockerContext: .
+    envVars:
+      - fromGroup: hasura-staging-secrets
+      - fromGroup: discord-secrets
+      - fromGroup: github-secrets
+      - fromGroup: backend-secrets
+      - key: GRAPHQL_HOST
+        fromService:
+          name: staging-hasura
+          type: web
+          property: host
+
+  # Hasura prod
+  - type: web
+    name: hasura
+    env: docker
+    healthCheckPath: /healthz
+    numInstances: 1
+    dockerfilePath: ./hasura/Dockerfile
+    dockerContext: ./hasura
+    envVars:
+      - fromGroup: hasura-secrets
+      - key: HASURA_GRAPHQL_DATABASE_URL
+        fromDatabase:
+          name: metagame-db
+          property: connectionString
+      - key: BACKEND_HOST
+        fromService:
+          name: backend
+          type: pserv
+          property: hostport
+      - key: HASURA_GRAPHQL_SERVER_PORT
+        value: 10000
+      - key: HASURA_GRAPHQL_ENABLE_CONSOLE
+        value: true
+      - key: PORT
+        value: 10000
+
+  # Hasura staging
+  - type: web
+    name: staging-hasura
+    env: docker
+    branch: develop
+    healthCheckPath: /healthz
+    numInstances: 1
+    dockerfilePath: ./hasura/Dockerfile
+    dockerContext: ./hasura
+    envVars:
+      - fromGroup: hasura-staging-secrets
+      - key: HASURA_GRAPHQL_DATABASE_URL
+        fromDatabase:
+          name: staging-metagame-db
+          property: connectionString
+      - key: BACKEND_HOST
+        fromService:
+          name: staging-backend
+          type: pserv
+          property: hostport
+      - key: HASURA_GRAPHQL_SERVER_PORT
+        value: 10000
+      - key: HASURA_GRAPHQL_ENABLE_CONSOLE
+        value: true
+      - key: PORT
+        value: 10000
+
+  # discord-bot
+  - type: web
+    name: discord-bot
+    env: docker
+    healthCheckPath: /healthz
+    numInstances: 1
+    dockerfilePath: ./docker/discord-bot/Dockerfile
+    dockerContext: .
+    envVars:
+      - fromGroup: hasura-secrets
+      - fromGroup: sourcecred
+      - key: PORT
+        value: 5000
+      - key: FRONTEND_URL
+        value: https://my.metagame.wtf
+      - key: SOURCECRED_LEDGER_BRANCH
+        value: master
+      - key: GRAPHQL_HOST
+        fromService:
+          name: hasura
+          type: web
+          property: host
+
+  # Note, no staging discord-bot
+
+databases:
+  - name: metagame-db
+    plan: starter
+  - name: staging-metagame-db
+    plan: starter
+
+envVarGroups:
+  - name: hasura-secrets
+    envVars:
+      - key: HASURA_GRAPHQL_ADMIN_SECRET
+        generateValue: true
+  - name: hasura-staging-secrets
+    envVars:
+      - key: HASURA_GRAPHQL_ADMIN_SECRET
+        generateValue: true
+  - name: github-secrets
+    envVars:
+      - key: GITHUB_API_TOKEN
+        sync: false
+  - name: sourcecred
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: GITHUB_API_TOKEN
+        sync: false
+  - name: discord-secrets
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: DISCORD_BOT_CLIENT_SECRET
+        sync: false
+  - name: backend-secrets
+    envVars:
+      - key: IMGIX_TOKEN
+        sync: false

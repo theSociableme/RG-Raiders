@@ -1,0 +1,1 @@
+{"version":3,"file":"setEthAddress.d.ts","sourceRoot":"","sources":["../../../src/discord/commands/setEthAddress.ts"],"names":[],"mappings":"AAAA,OAAO,EAAW,cAAc,EAAE,MAAM,iBAAiB,CAAC;AAO1D,aAAK,iBAAiB,GAAG;IACvB,UAAU,EAAE,MAAM,CAAC;IACnB,KAAK,EAAE,MAAM,CAAC;CACf,CAAC;AAEF,8BAAsB,aAAa;IAE3B,UAAU,CAAC,OAAO,EAAE,cAAc,CAAC,iBAAiB,CAAC;CAmF5D"}

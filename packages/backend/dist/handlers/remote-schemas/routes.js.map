@@ -1,0 +1,1 @@
+{"version":3,"file":"routes.js","sourceRoot":"","sources":["../../../src/handlers/remote-schemas/routes.ts"],"names":[],"mappings":";;;;;;AAAA,sDAA8B;AAC9B,qDAA8C;AAE9C,qCAAkC;AAErB,QAAA,kBAAkB,GAAG,iBAAO,CAAC,MAAM,EAAE,CAAC;AAEnD,0BAAkB,CAAC,GAAG,CACpB,UAAU,EACV,6BAAW,CAAC;IACV,MAAM,EAAN,eAAM;IACN,QAAQ,EAAE,IAAI;CACf,CAAC,CACH,CAAC"}
