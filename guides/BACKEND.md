@@ -56,9 +56,9 @@ $ docker ps
 
 # Check to see if there are any issues with the docker containers.
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
-6355ef5641a0        the-game_backend    "docker-entrypoint.s…"   51 minutes ago      Up 2 minutes        0.0.0.0:4000->4000/tcp   the-game_backend_1
-970f1ffb79c8        the-game_hasura     "/bin/sh -c '/wait &…"   51 minutes ago      Up 2 minutes        0.0.0.0:8080->8080/tcp   the-game_hasura_1
-38e3140ab632        postgres:12         "docker-entrypoint.s…"   51 minutes ago      Up 2 minutes        0.0.0.0:5432->5432/tcp   the-game_database_1
+6355ef5641a0        rg-profiles_backend    "docker-entrypoint.s…"   51 minutes ago      Up 2 minutes        0.0.0.0:4000->4000/tcp   rg-profiles_backend_1
+970f1ffb79c8        rg-profiles_hasura     "/bin/sh -c '/wait &…"   51 minutes ago      Up 2 minutes        0.0.0.0:8080->8080/tcp   rg-profiles_hasura_1
+38e3140ab632        postgres:12         "docker-entrypoint.s…"   51 minutes ago      Up 2 minutes        0.0.0.0:5432->5432/tcp   rg-profiles_database_1
 ```
 
 You can also read the logs of the services by running `docker-compose logs -f $SERVICE` (replace \$SERVICE by `backend` or `hasura`)
@@ -67,10 +67,10 @@ You can also read the logs of the services by running `docker-compose logs -f $S
 $ docker-compose logs -f backend
 
 ...
-backend_1   | @metafam/backend: [1] [18:59:07] Generate ./src/lib/autogen/daohaus-sdk.ts [completed]
-backend_1   | @metafam/backend: [1] [18:59:07] Generate outputs [completed]
-backend_1   | @metafam/backend: [1]   ℹ Watching for changes...
-backend_1   | @metafam/backend: [0] Listening on port 4000
+backend_1   | @raidguild/backend: [1] [18:59:07] Generate ./src/lib/autogen/daohaus-sdk.ts [completed]
+backend_1   | @raidguild/backend: [1] [18:59:07] Generate outputs [completed]
+backend_1   | @raidguild/backend: [1]   ℹ Watching for changes...
+backend_1   | @raidguild/backend: [0] Listening on port 4000
 ```
 
 After which you can run:

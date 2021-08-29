@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.computeRank = exports.RANKED_CAP = exports.PLAYERS_PER_RANK = exports.RANKS = void 0;
-const utils_1 = require("@metafam/utils");
+const utils_1 = require("@raidguild/utils");
 const hasura_sdk_1 = require("./autogen/hasura-sdk");
 exports.RANKS = [
     hasura_sdk_1.PlayerRank_Enum.Diamond,

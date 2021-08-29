@@ -1,4 +1,4 @@
-import { Constants } from '@metafam/utils';
+import { Constants } from '@raidguild/utils';
 import fetch from 'node-fetch';
 import { URLSearchParams } from 'url';
 

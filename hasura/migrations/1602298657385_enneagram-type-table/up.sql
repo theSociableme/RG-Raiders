@@ -12,10 +12,10 @@ INSERT INTO "EnneagramType" (name, description) VALUES
   ('CHALLENGER', 'Self-Confident, Decisive, Willful, and Confrontational'),
   ('PEACEMAKER', 'Receptive, Reassuring, Agreeable, and Complacent');
 
-ALTER TABLE "public"."Player" ALTER COLUMN "enneagram" TYPE text;
+ALTER TABLE "public"."Raider" ALTER COLUMN "enneagram" TYPE text;
 
-alter table "public"."Player"
-           add constraint "Player_enneagram_fkey"
+alter table "public"."Raider"
+           add constraint "Raider_enneagram_fkey"
            foreign key ("enneagram")
            references "public"."EnneagramType"
            ("name") on update restrict on delete restrict;

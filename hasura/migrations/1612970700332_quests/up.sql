@@ -28,7 +28,7 @@ CREATE TABLE "public"."quest" (
   "id" uuid NOT NULL DEFAULT gen_random_uuid(),
   "created_at" timestamptz NOT NULL DEFAULT now(),
   "guild_id" uuid NOT NULL,
-  "created_by_player_id" uuid NOT NULL,
+  "created_by_raider_id" uuid NOT NULL,
   "title" text NOT NULL,
   "description" text,
   "external_link" text,
@@ -36,7 +36,7 @@ CREATE TABLE "public"."quest" (
   "status" text NOT NULL DEFAULT 'OPEN',
   "repetition" text NOT NULL DEFAULT 'UNIQUE',
   PRIMARY KEY ("id") ,
-  FOREIGN KEY ("created_by_player_id") REFERENCES "public"."player"("id") ON UPDATE restrict ON DELETE restrict,
+  FOREIGN KEY ("created_by_raider_id") REFERENCES "public"."raider"("id") ON UPDATE restrict ON DELETE restrict,
   FOREIGN KEY ("guild_id") REFERENCES "public"."guild"("id") ON UPDATE restrict ON DELETE restrict,
   FOREIGN KEY ("status") REFERENCES "public"."QuestStatus"("status") ON UPDATE restrict ON DELETE restrict,
   FOREIGN KEY ("repetition") REFERENCES "public"."QuestRepetition"("repetition") ON UPDATE restrict ON DELETE restrict
@@ -53,13 +53,13 @@ CREATE TABLE "public"."quest_skill"(
 CREATE TABLE "public"."quest_completion"(
   "id" uuid NOT NULL DEFAULT gen_random_uuid(),
   "quest_id" uuid NOT NULL,
-  "completed_by_player_id" uuid NOT NULL,
+  "completed_by_raider_id" uuid NOT NULL,
   "submitted_at" timestamptz NOT NULL DEFAULT now(),
   "submission_text" text,
   "submission_link" text,
   "status" text NOT NULL DEFAULT 'PENDING',
   PRIMARY KEY ("id") ,
   FOREIGN KEY ("quest_id") REFERENCES "public"."quest"("id") ON UPDATE restrict ON DELETE restrict,
-  FOREIGN KEY ("completed_by_player_id") REFERENCES "public"."player"("id") ON UPDATE restrict ON DELETE restrict,
+  FOREIGN KEY ("completed_by_raider_id") REFERENCES "public"."raider"("id") ON UPDATE restrict ON DELETE restrict,
   FOREIGN KEY ("status") REFERENCES "public"."QuestCompletionStatus"("status") ON UPDATE restrict ON DELETE restrict
 );

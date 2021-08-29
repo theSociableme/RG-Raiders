@@ -2,7 +2,7 @@ import {
   Constants,
   getLatestEthAddress,
   isNotNullOrUndefined,
-} from '@metafam/utils';
+} from '@raidguild/utils';
 import bluebird from 'bluebird';
 import { Request, Response } from 'express';
 import fetch from 'node-fetch';

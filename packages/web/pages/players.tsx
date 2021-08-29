@@ -1,4 +1,4 @@
-import { LoadingState, Text, VStack } from '@metafam/ds';
+import { LoadingState, Text, VStack } from '@raidguild/ds';
 import { PageContainer } from 'components/Container';
 import { AdjascentTimezonePlayers } from 'components/Player/Filter/AdjascentTimezonePlayers';
 import { PlayerFilter } from 'components/Player/Filter/PlayerFilter';

@@ -1,4 +1,4 @@
-import { MetaButton, MetaHeading, Stack } from '@metafam/ds';
+import { MetaButton, MetaHeading, Stack } from '@raidguild/ds';
 import { FlexContainer } from 'components/Container';
 import { PlayerTile } from 'components/Player/PlayerTile';
 import { useUser } from 'lib/hooks';

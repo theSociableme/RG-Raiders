@@ -1,4 +1,4 @@
-import { Avatar, AvatarProps } from '@metafam/ds';
+import { Avatar, AvatarProps } from '@raidguild/ds';
 import { PlayerFragmentFragment } from 'graphql/autogen/types';
 import React from 'react';
 import {

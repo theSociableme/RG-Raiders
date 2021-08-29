@@ -1,4 +1,4 @@
-import { MetaTheme } from '@metafam/ds';
+import { MetaTheme } from '@raidguild/ds';
 import {
   Me,
   Member,

@@ -15,7 +15,7 @@ import {
   useDisclosure,
   Wrap,
   WrapItem,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { DesktopFilters } from 'components/Player/Filter/DesktopFilters';
 import { MobileFilters } from 'components/Player/Filter/MobileFilters';
 import { GetPlayersQueryVariables } from 'graphql/autogen/types';

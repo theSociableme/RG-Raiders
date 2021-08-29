@@ -11,7 +11,7 @@ import {
   SimpleGrid,
   Text,
   useDisclosure,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { PlayerFragmentFragment } from 'graphql/autogen/types';
 import React, { useMemo } from 'react';
 import { isBackdropFilterSupported } from 'utils/compatibilityHelpers';

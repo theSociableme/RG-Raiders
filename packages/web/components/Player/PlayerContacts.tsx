@@ -1,4 +1,4 @@
-import { BrightIdIcon, Button, Tooltip, Wrap, WrapItem } from '@metafam/ds';
+import { BrightIdIcon, Button, Tooltip, Wrap, WrapItem } from '@raidguild/ds';
 import { PlayerFragmentFragment } from 'graphql/autogen/types';
 import { useBrightIdStatus } from 'lib/hooks/brightId';
 import { useCopyToClipboard } from 'lib/hooks/useCopyToClipboard';

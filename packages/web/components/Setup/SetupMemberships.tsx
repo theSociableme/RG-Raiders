@@ -5,7 +5,7 @@ import {
   Text,
   Wrap,
   WrapItem,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { FlexContainer } from 'components/Container';
 import { useSetupFlow } from 'contexts/SetupContext';
 import { Membership } from 'graphql/types';

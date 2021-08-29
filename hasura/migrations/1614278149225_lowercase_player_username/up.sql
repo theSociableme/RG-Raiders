@@ -1,1 +1,1 @@
-UPDATE player SET username=lower(username);
+UPDATE raider SET username=lower(username);

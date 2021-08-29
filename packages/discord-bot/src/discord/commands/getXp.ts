@@ -1,4 +1,4 @@
-import { Constants } from '@metafam/utils';
+import { Constants } from '@raidguild/utils';
 import { Command, CommandMessage } from '@typeit/discord';
 import { MessageEmbed, Snowflake } from 'discord.js';
 import fetch from 'node-fetch';

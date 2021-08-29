@@ -1,4 +1,4 @@
-import { MetaTag, Tooltip } from '@metafam/ds';
+import { MetaTag, Tooltip } from '@raidguild/ds';
 import {
   QuestCompletionStatus_Enum,
   QuestRepetition_Enum,

@@ -1,4 +1,4 @@
-import { Button, Flex, FlexProps, HStack, Select } from '@metafam/ds';
+import { Button, Flex, FlexProps, HStack, Select } from '@raidguild/ds';
 import React from 'react';
 
 type Props = FlexProps & {

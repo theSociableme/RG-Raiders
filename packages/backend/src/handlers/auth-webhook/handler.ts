@@ -1,4 +1,4 @@
-import { did } from '@metafam/utils';
+import { did } from '@raidguild/utils';
 import { Request, Response } from 'express';
 
 import { defaultProvider } from '../../lib/ethereum';

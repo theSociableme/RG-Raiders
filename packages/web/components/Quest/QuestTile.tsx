@@ -9,7 +9,7 @@ import {
   MetaTileHeader,
   Text,
   VStack,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import BackgroundImage from 'assets/main-background.jpg';
 import { MetaLink } from 'components/Link';
 import { QuestFragmentFragment, Skill } from 'graphql/autogen/types';

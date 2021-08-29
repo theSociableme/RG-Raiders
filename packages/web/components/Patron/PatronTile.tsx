@@ -11,8 +11,8 @@ import {
   VStack,
   Wrap,
   WrapItem,
-} from '@metafam/ds';
-import { computeRank } from '@metafam/utils';
+} from '@raidguild/ds';
+import { computeRank } from '@raidguild/utils';
 import { MetaLink } from 'components/Link';
 import { PlayerContacts } from 'components/Player/PlayerContacts';
 import { PlayerTileMemberships } from 'components/Player/PlayerTileMemberships';

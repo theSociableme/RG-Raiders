@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.authHandler = void 0;
-const utils_1 = require("@metafam/utils");
+const utils_1 = require("@raidguild/utils");
 const ethereum_1 = require("../../lib/ethereum");
 const users_1 = require("./users");
 const unauthorizedVariables = {

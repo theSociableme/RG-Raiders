@@ -1,4 +1,4 @@
-import { MetaTag, Wrap, WrapItem } from '@metafam/ds';
+import { MetaTag, Wrap, WrapItem } from '@raidguild/ds';
 import { PlayerFragmentFragment } from 'graphql/autogen/types';
 import { SkillColors } from 'graphql/types';
 import React from 'react';

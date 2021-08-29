@@ -1,4 +1,4 @@
-import { MetaHeading, useToast } from '@metafam/ds';
+import { MetaHeading, useToast } from '@raidguild/ds';
 import {
   QuestRepetition_ActionEnum,
   useCreateQuestMutation,

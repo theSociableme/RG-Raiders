@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { createDiscordClient } from '@metafam/discord-bot';
+import { createDiscordClient } from '@raidguild/discord-bot';
 
 import { CONFIG } from '../../config';
 import { Player, PlayerRank_Enum } from '../../lib/autogen/hasura-sdk';

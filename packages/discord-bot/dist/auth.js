@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.exchangeCodeForAccessToken = exports.tokenRequestData = void 0;
 const tslib_1 = require("tslib");
-const utils_1 = require("@metafam/utils");
+const utils_1 = require("@raidguild/utils");
 const node_fetch_1 = tslib_1.__importDefault(require("node-fetch"));
 const url_1 = require("url");
 const config_1 = require("./config");

@@ -1,4 +1,4 @@
-import { Flex, LoadingState, Text, TimezoneOptions, VStack } from '@metafam/ds';
+import { Flex, LoadingState, Text, TimezoneOptions, VStack } from '@raidguild/ds';
 import { PlayerList } from 'components/Player/PlayerList';
 import { GetPlayersQueryVariables } from 'graphql/autogen/types';
 import { usePlayerFilter } from 'lib/hooks/players';

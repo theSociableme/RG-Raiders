@@ -1,4 +1,4 @@
-import { Avatar, Box, MetaButton, Text, VStack } from '@metafam/ds';
+import { Avatar, Box, MetaButton, Text, VStack } from '@raidguild/ds';
 import { GuildFragmentFragment } from 'graphql/autogen/types';
 import React from 'react';
 

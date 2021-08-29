@@ -1,5 +1,5 @@
 CREATE OR REPLACE VIEW "public"."me" AS
- SELECT "Player".id,
-    "Player".username,
-    "Player".ethereum_address
-   FROM "Player";
+ SELECT "Raider".id,
+    "Raider".username,
+    "Raider".ethereum_address
+   FROM "Raider";

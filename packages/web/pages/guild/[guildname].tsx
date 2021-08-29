@@ -1,4 +1,4 @@
-import { Box, Flex, LoadingState } from '@metafam/ds';
+import { Box, Flex, LoadingState } from '@raidguild/ds';
 import { QuestFragmentFragment, QuestStatus_Enum } from 'graphql/autogen/types';
 import { getGuild } from 'graphql/getGuild';
 import { getGuildnames } from 'graphql/getGuilds';

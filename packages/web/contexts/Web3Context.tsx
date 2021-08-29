@@ -1,4 +1,4 @@
-import { did } from '@metafam/utils';
+import { did } from '@raidguild/utils';
 import WalletConnectProvider from '@walletconnect/web3-provider';
 import { providers } from 'ethers';
 import {

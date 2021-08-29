@@ -1,4 +1,4 @@
-import { Box, Divider, HStack, SimpleGrid, Text } from '@metafam/ds';
+import { Box, Divider, HStack, SimpleGrid, Text } from '@raidguild/ds';
 import { PlayerFragmentFragment } from 'graphql/autogen/types';
 import React from 'react';
 import { FaClock } from 'react-icons/fa';

@@ -1,1 +1,1 @@
-alter table "public"."player" drop constraint "ethereum_address_is_valid";
+alter table "public"."raider" drop constraint "ethereum_address_is_valid";

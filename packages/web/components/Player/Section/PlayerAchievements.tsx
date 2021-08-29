@@ -1,4 +1,4 @@
-import { HStack, Text } from '@metafam/ds';
+import { HStack, Text } from '@raidguild/ds';
 import React from 'react';
 import { FaMedal } from 'react-icons/fa';
 

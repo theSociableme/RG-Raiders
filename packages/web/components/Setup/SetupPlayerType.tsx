@@ -4,7 +4,7 @@ import {
   SimpleGrid,
   Text,
   useToast,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { FlexContainer } from 'components/Container';
 import { useSetupFlow } from 'contexts/SetupContext';
 import { Player_Type, useUpdateAboutYouMutation } from 'graphql/autogen/types';

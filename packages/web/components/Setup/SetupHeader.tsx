@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Image, ResponsiveText } from '@metafam/ds';
+import { Box, Flex, Grid, Image, ResponsiveText } from '@raidguild/ds';
 import BackImage from 'assets/Back.svg';
 import LogoImage from 'assets/logo.png';
 import SkipImage from 'assets/Skip.svg';

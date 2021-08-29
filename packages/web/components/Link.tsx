@@ -1,4 +1,4 @@
-import { Link } from '@metafam/ds';
+import { Link } from '@raidguild/ds';
 import NextLink, { LinkProps } from 'next/link';
 import React from 'react';
 

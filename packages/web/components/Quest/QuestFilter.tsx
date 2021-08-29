@@ -6,7 +6,7 @@ import {
   Text,
   Wrap,
   WrapItem,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import {
   GetQuestsQueryVariables,
   Order_By,

@@ -1,4 +1,4 @@
-import { Heading, LoadingState, useToast } from '@metafam/ds';
+import { Heading, LoadingState, useToast } from '@raidguild/ds';
 import { getQuest } from 'graphql/getQuest';
 import { GetStaticPaths, GetStaticPropsContext } from 'next';
 import { useRouter } from 'next/router';

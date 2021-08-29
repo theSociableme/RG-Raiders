@@ -1,1 +1,1 @@
-alter table "public"."Account" add constraint "Account_type_player_id_key" unique ("type", "player_id");
+alter table "public"."Account" add constraint "Account_type_raider_id_key" unique ("type", "raider_id");

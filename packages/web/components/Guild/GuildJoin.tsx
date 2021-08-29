@@ -9,8 +9,8 @@ import {
   MetaHeading,
   Text,
   VStack,
-} from '@metafam/ds';
-import { Constants } from '@metafam/utils';
+} from '@raidguild/ds';
+import { Constants } from '@raidguild/utils';
 import { FlexContainer } from 'components/Container';
 import { MetaLink } from 'components/Link';
 import { CONFIG } from 'config';

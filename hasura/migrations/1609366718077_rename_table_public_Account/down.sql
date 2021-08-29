@@ -1,1 +1,1 @@
-alter table "public"."player_account" rename to "Account";
+alter table "public"."raider_account" rename to "Account";

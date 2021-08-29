@@ -1,4 +1,4 @@
-import { Image, Text, VStack } from '@metafam/ds';
+import { Image, Text, VStack } from '@raidguild/ds';
 import PlayersNotFoundImage from 'assets/no-players-found.svg';
 import React from 'react';
 

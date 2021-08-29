@@ -1,4 +1,4 @@
-import { IconButton, Wrap, WrapItem } from '@metafam/ds';
+import { IconButton, Wrap, WrapItem } from '@raidguild/ds';
 import { GuildFragmentFragment } from 'graphql/autogen/types';
 import React from 'react';
 import { FaDiscord, FaGithub, FaGlobe, FaTwitter } from 'react-icons/fa';

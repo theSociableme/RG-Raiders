@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetXpCommand = void 0;
 const tslib_1 = require("tslib");
-const utils_1 = require("@metafam/utils");
+const utils_1 = require("@raidguild/utils");
 const discord_1 = require("@typeit/discord");
 const discord_js_1 = require("discord.js");
 const node_fetch_1 = tslib_1.__importDefault(require("node-fetch"));
