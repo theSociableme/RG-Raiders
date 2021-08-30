@@ -1,5 +1,5 @@
 ALTER TABLE public.raider
-  DROP CONSTRAINT "Player_enneagram_fkey"
+  DROP CONSTRAINT "Raider_enneagram_fkey"
 ;
 
 ALTER TABLE public.raider

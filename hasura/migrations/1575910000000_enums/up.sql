@@ -1,0 +1,21 @@
+-- Enums
+
+CREATE TYPE account_type AS ENUM (
+  'ETHEREUM',
+  'DISCORD',
+  'GITHUB',
+  'TWITTER',
+  'DISCOURSE'
+);
+
+CREATE TYPE enneagram_type AS ENUM (
+  'REFORMER',
+  'HELPER',
+  'ACHIEVER',
+  'INDIVIDUALIST',
+  'INVESTIGATOR',
+  'LOYALIST',
+  'ENTHUSIAST',
+  'CHALLENGER',
+  'PEACEMAKER'
+);

@@ -1,6 +1,6 @@
 
 alter table "public"."raider_skill" drop constraint "raider_skill_raider_id_fkey",
-          add constraint "Player_Skill_raider_id_fkey"
+          add constraint "Raider_Skill_raider_id_fkey"
           foreign key ("raider_id")
           references "public"."raider"
           ("id")

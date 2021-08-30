@@ -4,7 +4,7 @@ alter table "public"."raider_account" drop constraint "Account_raider_id_fkey",
              references "public"."raider"
              ("id") on update no action on delete cascade;
 
-alter table "public"."raider_skill" drop constraint "Player_Skill_raider_id_fkey",
+alter table "public"."raider_skill" drop constraint "Raider_Skill_raider_id_fkey",
              add constraint "raider_skill_raider_id_fkey"
              foreign key ("raider_id")
              references "public"."raider"

@@ -21,7 +21,7 @@ ALTER TABLE public.raider
 ;
 
 ALTER TABLE public.raider
-  ADD CONSTRAINT "Player_enneagram_fkey"
+  ADD CONSTRAINT "Raider_enneagram_fkey"
   FOREIGN KEY (enneagram)
   REFERENCES public."EnneagramType"(name)
   ON UPDATE restrict ON DELETE restrict
