@@ -6,7 +6,7 @@ import {
   MetaHeading,
   Text,
   useToast,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { FlexContainer } from 'components/Container';
 import { MetaLink } from 'components/Link';
 import { ColorBar } from 'components/Player/ColorBar';

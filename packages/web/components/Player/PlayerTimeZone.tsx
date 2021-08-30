@@ -1,4 +1,4 @@
-import { Box, HStack, Text } from '@metafam/ds';
+import { Box, HStack, Text } from '@raidguild/ds';
 import { PlayerFragmentFragment } from 'graphql/autogen/types';
 import React, { useMemo } from 'react';
 import { FaGlobe } from 'react-icons/fa';

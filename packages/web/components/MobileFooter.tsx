@@ -6,7 +6,7 @@ import {
   motion,
   Stack,
   useDisclosure,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import MetaGameLogo from 'assets/logo.png';
 import { MetaLink } from 'components/Link';
 import React from 'react';

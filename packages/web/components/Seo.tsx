@@ -32,7 +32,7 @@ export const HeadComponent: React.FC<HeadMetaProps> = ({
 
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:url" content={url} />
-    <meta property="twitter:site" content="@MetaFam" />
+    <meta property="twitter:site" content="@raidguild" />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={img} />

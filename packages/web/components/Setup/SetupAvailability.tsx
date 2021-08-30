@@ -7,7 +7,7 @@ import {
   MetaHeading,
   Text,
   useToast,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { FlexContainer } from 'components/Container';
 import { useSetupFlow } from 'contexts/SetupContext';
 import { useUpdateProfileMutation } from 'graphql/autogen/types';

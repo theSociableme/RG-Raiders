@@ -19,7 +19,7 @@ import {
   Text,
   TimezoneOptions,
   TimezoneType,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { SkillCategory_Enum } from 'graphql/autogen/types';
 import { SkillColors } from 'graphql/types';
 import { PlayerAggregates } from 'lib/hooks/players';

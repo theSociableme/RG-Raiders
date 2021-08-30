@@ -1,1 +1,1 @@
-ALTER TABLE "public"."Player" DROP COLUMN "availability_hours";
+ALTER TABLE "public"."Raider" DROP COLUMN "availability_hours";

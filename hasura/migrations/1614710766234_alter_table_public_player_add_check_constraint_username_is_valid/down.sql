@@ -1,1 +1,1 @@
-alter table "public"."player" drop constraint "username_is_valid";
+alter table "public"."raider" drop constraint "username_is_valid";

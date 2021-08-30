@@ -1,4 +1,4 @@
-import { numbers } from '@metafam/utils';
+import { numbers } from '@raidguild/utils';
 
 import {
   QuestRepetition_Enum,

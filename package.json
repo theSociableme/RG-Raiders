@@ -1,5 +1,5 @@
 {
-  "name": "@metafam/the-game",
+  "name": "@raidguild/profiles",
   "version": "0.1.0",
   "license": "GPL-3.0",
   "engines": {
@@ -12,10 +12,10 @@
     "docker:build": "docker-compose up --build -d",
     "docker:stop": "docker-compose down",
     "docker:clean": "docker-compose down -v",
-    "web:dev": "lerna run dev --parallel --scope @metafam/web --include-dependencies",
-    "web:build": "lerna run build --scope @metafam/web --include-dependencies --stream",
-    "backend:dev": "lerna run dev --parallel --scope @metafam/backend",
-    "backend:build": "lerna run build --scope @metafam/backend --include-dependencies --stream",
+    "web:dev": "lerna run dev --parallel --scope @raidguild/web --include-dependencies",
+    "web:build": "lerna run build --scope @raidguild/web --include-dependencies --stream",
+    "backend:dev": "lerna run dev --parallel --scope @raidguild/backend",
+    "backend:build": "lerna run build --scope @raidguild/backend --include-dependencies --stream",
     "hasura": "hasura --project ./hasura",
     "hasura:console": "yarn hasura console --no-browser",
     "hasura:migrate:init": "yarn hasura migrate create \"init\" --from-server",
@@ -28,7 +28,7 @@
     "lint": "eslint --ignore-path .gitignore \"./packages/**/*.{ts,tsx,js,jsx}\"",
     "typecheck": "lerna run typecheck",
     "prepare": "lerna run prepare && husky install",
-    "precommit": "lerna run --concurrency 1 --stream precommit && yarn lint-staged",
+    "precommit": "lerna run --concurrency 1 --stream precommit",
     "prepush": "yarn typecheck",
     "discord-bot": "yarn --cwd packages/discord-bot/",
     "backend": "yarn --cwd packages/backend/",
@@ -41,7 +41,7 @@
   ],
   "devDependencies": {
     "@graphql-codegen/add": "2.0.2",
-    "@graphql-codegen/cli": "1.21.4",
+    "@graphql-codegen/cli": "^2.1.1",
     "@graphql-codegen/introspection": "1.18.2",
     "@graphql-codegen/typescript": "1.22.0",
     "@graphql-codegen/typescript-graphql-request": "3.2.0",
@@ -82,5 +82,11 @@
   "resolutions": {
     "bcrypto": "5.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@ardatan/fetch-event-source": "^2.0.2",
+    "graphql-codegen": "^0.4.0",
+    "meros": "^1.1.4",
+    "subscriptions-transport-ws": "^0.9.19",
+    "value-or-promise": "^1.0.10"
+  }
 }

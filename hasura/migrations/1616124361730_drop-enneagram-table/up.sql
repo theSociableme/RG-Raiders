@@ -1,8 +1,8 @@
-ALTER TABLE public.player
-  DROP CONSTRAINT "Player_enneagram_fkey"
+ALTER TABLE public.raider
+  DROP CONSTRAINT "Raider_enneagram_fkey"
 ;
 
-ALTER TABLE public.player
+ALTER TABLE public.raider
   DROP COLUMN enneagram
 ;
 

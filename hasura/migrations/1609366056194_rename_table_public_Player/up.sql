@@ -1,1 +1,1 @@
-alter table "public"."Player" rename to "player";
+alter table "public"."Raider" rename to "raider";

@@ -11,8 +11,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleOAuthCallback = void 0;
 /* eslint-disable no-console */
-const discord_bot_1 = require("@metafam/discord-bot");
-const utils_1 = require("@metafam/utils");
+const discord_bot_1 = require("@raidguild/discord-bot");
+const utils_1 = require("@raidguild/utils");
 const uuid_1 = require("uuid");
 const hasura_sdk_1 = require("../../../../lib/autogen/hasura-sdk");
 const hasuraClient_1 = require("../../../../lib/hasuraClient");

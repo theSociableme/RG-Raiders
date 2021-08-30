@@ -1,4 +1,4 @@
-import { Heading, VStack } from '@metafam/ds';
+import { Heading, VStack } from '@raidguild/ds';
 import fetch from 'node-fetch';
 import React, { useEffect, useState } from 'react';
 

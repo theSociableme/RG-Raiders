@@ -5,7 +5,7 @@ import {
   MetaButton,
   Text,
   VStack,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import {
   CreateQuestCompletionInput,
   QuestFragmentFragment,

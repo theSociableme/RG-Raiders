@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.loadCredGraph = exports.ledgerManager = void 0;
-const utils_1 = require("@metafam/utils");
+const utils_1 = require("@raidguild/utils");
 const sourcecred_1 = require("sourcecred");
 const config_1 = require("../config");
 const storage = new sourcecred_1.sourcecred.ledger.storage.GithubStorage({

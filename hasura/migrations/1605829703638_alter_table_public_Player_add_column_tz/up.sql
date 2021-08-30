@@ -1,1 +1,1 @@
-ALTER TABLE "public"."Player" ADD COLUMN "tz" text NULL;
+ALTER TABLE "public"."Raider" ADD COLUMN "tz" text NULL;

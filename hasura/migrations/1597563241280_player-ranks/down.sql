@@ -1,6 +1,6 @@
 
-alter table "public"."Player" drop constraint "Player_rank_fkey";
+alter table "public"."Raider" drop constraint "Raider_rank_fkey";
 
-ALTER TABLE "public"."Player" DROP COLUMN "rank";
+ALTER TABLE "public"."Raider" DROP COLUMN "rank";
 
-DROP TABLE "public"."Player_Rank";
+DROP TABLE "public"."Raider_Rank";

@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateDiscordRole = void 0;
 /* eslint-disable no-console */
-const discord_bot_1 = require("@metafam/discord-bot");
+const discord_bot_1 = require("@raidguild/discord-bot");
 const config_1 = require("../../config");
 const hasuraClient_1 = require("../../lib/hasuraClient");
 const updateDiscordRole = (payload) => __awaiter(void 0, void 0, void 0, function* () {

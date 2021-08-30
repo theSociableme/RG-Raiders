@@ -12,7 +12,7 @@ import {
   Text,
   useDisclosure,
   VStack,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { PlayerFragmentFragment } from 'graphql/autogen/types';
 import { useUser, useWeb3 } from 'lib/hooks';
 import { useBrightIdStatus, useBrightIdUpdated } from 'lib/hooks/brightId';

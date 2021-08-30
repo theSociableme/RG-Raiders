@@ -6,15 +6,15 @@
     schema: public
     name: ColorAspect
   array_relationships:
-  - name: players
+  - name: raiders
     using:
       foreign_key_constraint_on:
         column: color_mask
         table:
           schema: public
-          name: player
+          name: raider
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - mask
@@ -49,7 +49,7 @@
           schema: public
           name: guild
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - name
@@ -61,7 +61,7 @@
       filter: {}
 - table:
     schema: public
-    name: PlayerRank
+    name: RaiderRank
   is_enum: true
 - table:
     schema: public
@@ -118,13 +118,13 @@
         table:
           schema: public
           name: guild_account
-  - name: guild_players
+  - name: guild_raiders
     using:
       foreign_key_constraint_on:
         column: guild_id
         table:
           schema: public
-          name: guild_player
+          name: guild_raider
   - name: quests
     using:
       foreign_key_constraint_on:
@@ -133,7 +133,7 @@
           schema: public
           name: quest
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - description
@@ -183,16 +183,16 @@
       foreign_key_constraint_on: guild_id
 - table:
     schema: public
-    name: guild_player
+    name: guild_raider
   object_relationships:
   - name: Guild
     using:
       foreign_key_constraint_on: guild_id
-  - name: Player
+  - name: Raider
     using:
-      foreign_key_constraint_on: player_id
+      foreign_key_constraint_on: raider_id
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns: []
       filter: {}
@@ -204,16 +204,16 @@
     schema: public
     name: me
   object_relationships:
-  - name: player
+  - name: raider
     using:
       manual_configuration:
         remote_table:
           schema: public
-          name: player
+          name: raider
         column_mapping:
           id: id
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - id
@@ -224,14 +224,14 @@
           _eq: X-Hasura-User-Id
 - table:
     schema: public
-    name: player
+    name: raider
   object_relationships:
   - name: ColorAspect
     using:
       foreign_key_constraint_on: color_mask
-  - name: playerType
+  - name: raiderType
     using:
-      foreign_key_constraint_on: player_type_id
+      foreign_key_constraint_on: raider_type_id
   - name: profile_cache
     using:
       manual_configuration:
@@ -239,40 +239,40 @@
           schema: public
           name: profile_cache
         column_mapping:
-          id: player_id
+          id: raider_id
   array_relationships:
   - name: Accounts
     using:
       foreign_key_constraint_on:
-        column: player_id
+        column: raider_id
         table:
           schema: public
-          name: player_account
+          name: raider_account
   - name: guilds
     using:
       foreign_key_constraint_on:
-        column: player_id
+        column: raider_id
         table:
           schema: public
-          name: guild_player
-  - name: Player_Skills
+          name: guild_raider
+  - name: Raider_Skills
     using:
       foreign_key_constraint_on:
-        column: player_id
+        column: raider_id
         table:
           schema: public
-          name: player_skill
+          name: raider_skill
   - name: quest_completions
     using:
       foreign_key_constraint_on:
-        column: completed_by_player_id
+        column: completed_by_raider_id
         table:
           schema: public
           name: quest_completion
   - name: quests
     using:
       foreign_key_constraint_on:
-        column: created_by_player_id
+        column: created_by_raider_id
         table:
           schema: public
           name: quest
@@ -314,16 +314,15 @@
       remote_schema: backend
     name: token_balances
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - availability_hours
       - color_mask
       - ethereum_address
       - id
-      - player_type_id
+      - raider_type_id
       - rank
-      - role
       - season_xp
       - timezone
       - total_xp
@@ -338,7 +337,6 @@
       - ethereum_address
       - id
       - rank
-      - role
       - season_xp
       - timezone
       - total_xp
@@ -346,13 +344,12 @@
       filter: {}
       allow_aggregations: true
   update_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - availability_hours
       - color_mask
-      - player_type_id
-      - role
+      - raider_type_id
       - timezone
       - username
       filter:
@@ -375,7 +372,7 @@
       interval_sec: 10
       timeout_sec: 60
     webhook: '{{TRIGGERS_ENDPOINT}}'
-  - name: player_rank_updated
+  - name: raider_rank_updated
     definition:
       enable_manual: false
       update:
@@ -388,70 +385,70 @@
     webhook_from_env: TRIGGERS_ENDPOINT
 - table:
     schema: public
-    name: player_account
+    name: raider_account
   object_relationships:
-  - name: Player
+  - name: Raider
     using:
-      foreign_key_constraint_on: player_id
+      foreign_key_constraint_on: raider_id
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
-      - player_id
+      - raider_id
       - identifier
       - type
       filter: {}
   - role: public
     permission:
       columns:
-      - player_id
+      - raider_id
       - identifier
       - type
       filter: {}
 - table:
     schema: public
-    name: player_skill
+    name: raider_skill
   object_relationships:
   - name: Skill
     using:
       foreign_key_constraint_on: skill_id
   insert_permissions:
-  - role: player
+  - role: raider
     permission:
       check:
-        player_id:
+        raider_id:
           _eq: X-Hasura-User-Id
       set:
-        player_id: x-hasura-User-Id
+        raider_id: x-hasura-User-Id
       columns:
       - skill_id
       backend_only: false
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
-      - player_id
+      - raider_id
       - skill_id
       filter: {}
       allow_aggregations: true
   - role: public
     permission:
       columns:
-      - player_id
+      - raider_id
       - skill_id
       filter: {}
       allow_aggregations: true
   delete_permissions:
-  - role: player
+  - role: raider
     permission:
       filter:
-        player_id:
+        raider_id:
           _eq: X-Hasura-User-Id
 - table:
     schema: public
-    name: player_type
+    name: raider_type
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - description
@@ -475,13 +472,13 @@
     custom_column_names:
       background_image_url: backgroundImageURL
       image_url: imageURL
-      player_id: playerId
+      raider_id: raiderId
   object_relationships:
-  - name: player
+  - name: raider
     using:
-      foreign_key_constraint_on: player_id
+      foreign_key_constraint_on: raider_id
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - name
@@ -493,7 +490,7 @@
       - website
       - gender
       - id
-      - player_id
+      - raider_id
       filter: {}
   - role: public
     permission:
@@ -507,10 +504,10 @@
       - name
       - website
       - id
-      - player_id
+      - raider_id
       filter: {}
   update_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - background_image_url
@@ -522,7 +519,7 @@
       - name
       - website
       filter:
-        player_id:
+        raider_id:
           _eq: X-Hasura-User-Id
       check: null
 - table:
@@ -532,9 +529,9 @@
   - name: guild
     using:
       foreign_key_constraint_on: guild_id
-  - name: player
+  - name: raider
     using:
-      foreign_key_constraint_on: created_by_player_id
+      foreign_key_constraint_on: created_by_raider_id
   - name: QuestRepetition
     using:
       foreign_key_constraint_on: repetition
@@ -557,7 +554,7 @@
           schema: public
           name: quest_skill
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - created_at
@@ -567,7 +564,7 @@
       - repetition
       - status
       - title
-      - created_by_player_id
+      - created_by_raider_id
       - guild_id
       - id
       filter: {}
@@ -578,7 +575,7 @@
       - id
       - created_at
       - guild_id
-      - created_by_player_id
+      - created_by_raider_id
       - title
       - description
       - external_link
@@ -588,7 +585,7 @@
       filter: {}
       allow_aggregations: true
   update_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - cooldown
@@ -600,7 +597,7 @@
       - title
       filter:
         _and:
-        - created_by_player_id:
+        - created_by_raider_id:
             _eq: X-Hasura-User-Id
         - status:
             _eq: OPEN
@@ -617,9 +614,9 @@
     schema: public
     name: quest_completion
   object_relationships:
-  - name: player
+  - name: raider
     using:
-      foreign_key_constraint_on: completed_by_player_id
+      foreign_key_constraint_on: completed_by_raider_id
   - name: quest
     using:
       foreign_key_constraint_on: quest_id
@@ -627,10 +624,10 @@
     using:
       foreign_key_constraint_on: status
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
-      - completed_by_player_id
+      - completed_by_raider_id
       - id
       - quest_id
       - status
@@ -641,7 +638,7 @@
   - role: public
     permission:
       columns:
-      - completed_by_player_id
+      - completed_by_raider_id
       - id
       - quest_id
       - status
@@ -650,7 +647,7 @@
       - submitted_at
       filter: {}
   update_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - submission_link
@@ -659,7 +656,7 @@
         _and:
         - status:
             _eq: PENDING
-        - completed_by_player_id:
+        - completed_by_raider_id:
             _eq: X-Hasura-User-Id
       check: null
 - table:
@@ -673,18 +670,18 @@
     using:
       foreign_key_constraint_on: skill_id
   insert_permissions:
-  - role: player
+  - role: raider
     permission:
       check:
         quest:
-          created_by_player_id:
+          created_by_raider_id:
             _eq: X-Hasura-User-Id
       columns:
       - quest_id
       - skill_id
       backend_only: false
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - quest_id
@@ -697,23 +694,23 @@
       - skill_id
       filter: {}
   delete_permissions:
-  - role: player
+  - role: raider
     permission:
       filter:
         quest:
-          created_by_player_id:
+          created_by_raider_id:
             _eq: X-Hasura-User-Id
 - table:
     schema: public
     name: skill
   array_relationships:
-  - name: Player_Skills
+  - name: Raider_Skills
     using:
       foreign_key_constraint_on:
         column: skill_id
         table:
           schema: public
-          name: player_skill
+          name: raider_skill
   - name: quest_skills
     using:
       foreign_key_constraint_on:
@@ -722,14 +719,14 @@
           schema: public
           name: quest_skill
   insert_permissions:
-  - role: player
+  - role: raider
     permission:
       check: {}
       columns:
       - name
       backend_only: false
   select_permissions:
-  - role: player
+  - role: raider
     permission:
       columns:
       - category

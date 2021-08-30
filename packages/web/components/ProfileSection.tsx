@@ -1,4 +1,4 @@
-import { Box, HStack, Text } from '@metafam/ds';
+import { Box, HStack, Text } from '@raidguild/ds';
 import React from 'react';
 import { FaTimes } from 'react-icons/fa';
 

@@ -6,7 +6,7 @@ import {
   AlertDialogHeader,
   AlertDialogOverlay,
   MetaButton,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import React, { useRef } from 'react';
 
 type Props = {

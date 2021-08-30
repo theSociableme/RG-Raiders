@@ -1,8 +1,8 @@
-ALTER TABLE public.player
-  DROP CONSTRAINT player_color_mask_fkey
+ALTER TABLE public.raider
+  DROP CONSTRAINT raider_color_mask_fkey
 ;
 
-ALTER TABLE public.player
+ALTER TABLE public.raider
   DROP COLUMN color_mask
 ;
 

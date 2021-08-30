@@ -1,4 +1,4 @@
-import { Constants } from '@metafam/utils';
+import { Constants } from '@raidguild/utils';
 import { CredGraph, LedgerManager, sourcecred } from 'sourcecred';
 
 import { CONFIG } from '../config';

@@ -1,4 +1,4 @@
-import { Flex, Heading, LoadingState, Stack, useToast } from '@metafam/ds';
+import { Flex, Heading, LoadingState, Stack, useToast } from '@raidguild/ds';
 import { MetaLink } from 'components/Link';
 import {
   CreateQuestCompletionInput,

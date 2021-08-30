@@ -20,13 +20,13 @@ type Mutation {
 
 
 type Mutation {
-  updateExpiredIDXProfiles : ExpiredPlayerProfiles
+  updateExpiredIDXProfiles : ExpiredRaiderProfiles
 }
 
 
 type Mutation {
   updateIDXProfile (
-    playerId: uuid
+    raiderId: uuid
   ): CacheProcessOutput
 }
 
@@ -112,7 +112,7 @@ type UpdateIDXProfileResponse {
   updatedProfiles : [String!]!
 }
 
-type ExpiredPlayerProfiles {
+type ExpiredRaiderProfiles {
   ids : [String]!
 }
 

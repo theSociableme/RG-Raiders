@@ -1,5 +1,5 @@
 {
-  "name": "@metafam/web",
+  "name": "@raidguild/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,12 +8,12 @@
     "start": "next start",
     "typecheck": "tsc",
     "precommit": "yarn lint-staged",
-    "generate": "graphql-codegen --config=codegen.yml",
+    "generate": "graphql-codegen",
     "prepare": "yarn generate"
   },
   "dependencies": {
-    "@metafam/ds": "0.1.0",
-    "@metafam/utils": "1.0.0",
+    "@raidguild/ds": "0.1.0",
+    "@raidguild/utils": "1.0.0",
     "@types/react": "17.0.6",
     "@urql/exchange-retry": "0.2.1",
     "@walletconnect/web3-provider": "1.5.2",

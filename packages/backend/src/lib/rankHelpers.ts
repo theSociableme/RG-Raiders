@@ -1,4 +1,4 @@
-import { computeRank as computeRankUtil, computeRankCap } from '@metafam/utils';
+import { computeRank as computeRankUtil, computeRankCap } from '@raidguild/utils';
 
 import { PlayerRank_Enum } from './autogen/hasura-sdk';
 

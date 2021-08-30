@@ -4,8 +4,8 @@ import {
   GuildDiscordMetadata,
   OAuth2CodeExchangeResponse,
   PartialGuild,
-} from '@metafam/discord-bot';
-import { DiscordUtil } from '@metafam/utils';
+} from '@raidguild/discord-bot';
+import { DiscordUtil } from '@raidguild/utils';
 import { Request, Response } from 'express';
 import { v4 as uuidv4 } from 'uuid';
 

@@ -1,4 +1,4 @@
-import { TimezoneOptions } from '@metafam/ds';
+import { TimezoneOptions } from '@raidguild/ds';
 
 export interface TimeZoneDisplay {
   timeZone?: string;

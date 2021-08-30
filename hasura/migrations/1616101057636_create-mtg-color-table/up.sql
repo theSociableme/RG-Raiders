@@ -73,15 +73,15 @@ UPDATE "ColorAspect"
 ;
 
 -- 
--- Add color_mask integer to player and set as a foreign key
+-- Add color_mask integer to raider and set as a foreign key
 -- 
 
-ALTER TABLE public.player
+ALTER TABLE public.raider
   ADD COLUMN color_mask integer
 ;
 
-ALTER TABLE public.player
-  ADD CONSTRAINT player_color_mask_fkey
+ALTER TABLE public.raider
+  ADD CONSTRAINT raider_color_mask_fkey
   FOREIGN KEY (color_mask)
   REFERENCES public."ColorAspect"(mask)
   ON UPDATE restrict ON DELETE restrict

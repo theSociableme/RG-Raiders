@@ -1,4 +1,4 @@
-import { MetaButton, MetaHeading, SelectTimeZone, useToast } from '@metafam/ds';
+import { MetaButton, MetaHeading, SelectTimeZone, useToast } from '@raidguild/ds';
 import { FlexContainer } from 'components/Container';
 import { useSetupFlow } from 'contexts/SetupContext';
 import { useUpdateProfileMutation } from 'graphql/autogen/types';

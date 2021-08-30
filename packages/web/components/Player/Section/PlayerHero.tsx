@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Link, Text, VStack } from '@metafam/ds';
+import { Box, Flex, HStack, Link, Text, VStack } from '@raidguild/ds';
 import { PlayerAvatar } from 'components/Player/PlayerAvatar';
 import { PlayerFragmentFragment } from 'graphql/autogen/types';
 import { getPersonalityInfo } from 'graphql/getPersonalityInfo';

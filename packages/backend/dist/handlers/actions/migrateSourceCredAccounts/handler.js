@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.migrateSourceCredAccounts = void 0;
-const utils_1 = require("@metafam/utils");
+const utils_1 = require("@raidguild/utils");
 const bluebird_1 = __importDefault(require("bluebird"));
 const node_fetch_1 = __importDefault(require("node-fetch"));
 const sourcecred_1 = require("sourcecred");

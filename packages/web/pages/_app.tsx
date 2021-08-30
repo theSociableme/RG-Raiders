@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import { ChakraProvider, CSSReset, MetaTheme } from '@metafam/ds';
+import { ChakraProvider, CSSReset, MetaTheme } from '@raidguild/ds';
 import { MobileFooter } from 'components/MobileFooter';
 import { PageHeader } from 'components/PageHeader';
 import { CONFIG } from 'config';

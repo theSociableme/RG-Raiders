@@ -12,7 +12,7 @@ import {
   VStack,
   Wrap,
   WrapItem,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { PlayerAvatar } from 'components/Player/PlayerAvatar';
 import { PlayerContacts } from 'components/Player/PlayerContacts';
 import { PlayerTileMemberships } from 'components/Player/PlayerTileMemberships';

@@ -7,7 +7,7 @@ import {
   MetaButton,
   Wrap,
   WrapItem,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { MetaLink } from 'components/Link';
 import {
   QuestRepetition_Enum,

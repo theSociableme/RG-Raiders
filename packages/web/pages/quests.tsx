@@ -6,7 +6,7 @@ import {
   MetaButton,
   Text,
   Tooltip,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { PageContainer } from 'components/Container';
 import { QuestFilter } from 'components/Quest/QuestFilter';
 import { QuestList } from 'components/Quest/QuestList';

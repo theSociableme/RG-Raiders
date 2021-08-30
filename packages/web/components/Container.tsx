@@ -1,4 +1,4 @@
-import { Flex } from '@metafam/ds';
+import { Flex } from '@raidguild/ds';
 import BackgroundImage from 'assets/main-background.jpg';
 import React from 'react';
 

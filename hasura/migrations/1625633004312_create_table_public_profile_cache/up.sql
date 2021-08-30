@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS public.profile_cache (
   background_image_url TEXT,
   website TEXT,
   gender TEXT,
-  player_id uuid NOT NULL UNIQUE,
+  raider_id uuid NOT NULL UNIQUE,
   id uuid NOT NULL DEFAULT gen_random_uuid(),
   PRIMARY KEY (id),
   UNIQUE (id)
@@ -19,11 +19,11 @@ CREATE TABLE IF NOT EXISTS public.profile_cache (
 
 ALTER TABLE public.profile_cache
   DROP CONSTRAINT IF EXISTS
-  profile_cache_player_id_fkey
+  profile_cache_raider_id_fkey
 ;
 ALTER TABLE public.profile_cache
-  ADD CONSTRAINT profile_cache_player_id_fkey
-  FOREIGN KEY (player_id)
-  REFERENCES public.player(id)
+  ADD CONSTRAINT profile_cache_raider_id_fkey
+  FOREIGN KEY (raider_id)
+  REFERENCES public.raider(id)
   ON UPDATE CASCADE ON DELETE CASCADE
 ;

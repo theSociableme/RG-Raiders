@@ -1,4 +1,4 @@
-import { SimpleGrid } from '@metafam/ds';
+import { SimpleGrid } from '@raidguild/ds';
 import { PatronTile } from 'components/Patron/PatronTile';
 import { Patron } from 'graphql/types';
 import React from 'react';

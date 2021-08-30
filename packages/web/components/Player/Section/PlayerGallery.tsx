@@ -10,7 +10,7 @@ import {
   SimpleGrid,
   Text,
   useDisclosure,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { MetaLink as Link } from 'components/Link';
 import { ProfileSection } from 'components/ProfileSection';
 import { PlayerFragmentFragment } from 'graphql/autogen/types';

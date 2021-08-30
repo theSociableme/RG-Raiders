@@ -16,12 +16,12 @@ INSERT INTO "EnneagramType" (name, description) VALUES
   ('PEACEMAKER', 'Receptive, Reassuring, Agreeable, and Complacent')
 ;
 
-ALTER TABLE public.player
+ALTER TABLE public.raider
   ADD COLUMN enneagram text
 ;
 
-ALTER TABLE public.player
-  ADD CONSTRAINT "Player_enneagram_fkey"
+ALTER TABLE public.raider
+  ADD CONSTRAINT "Raider_enneagram_fkey"
   FOREIGN KEY (enneagram)
   REFERENCES public."EnneagramType"(name)
   ON UPDATE restrict ON DELETE restrict

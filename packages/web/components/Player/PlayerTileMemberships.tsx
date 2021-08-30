@@ -1,4 +1,4 @@
-import { MetaTag, Text, VStack, Wrap, WrapItem } from '@metafam/ds';
+import { MetaTag, Text, VStack, Wrap, WrapItem } from '@raidguild/ds';
 import { PlayerFragmentFragment } from 'graphql/autogen/types';
 import React, { useMemo } from 'react';
 

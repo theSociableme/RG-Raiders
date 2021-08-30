@@ -10,7 +10,7 @@ import {
   Text,
   Textarea,
   VStack,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import {
   GuildFragmentFragment,
   QuestFragmentFragment,

@@ -1,4 +1,4 @@
-import { SimpleGrid, Text } from '@metafam/ds';
+import { SimpleGrid, Text } from '@raidguild/ds';
 import { PlayerTile } from 'components/Player/PlayerTile';
 import { PlayerFragmentFragment } from 'graphql/autogen/types';
 import React from 'react';

@@ -1,4 +1,4 @@
-import { Input, MetaButton, MetaHeading, useToast } from '@metafam/ds';
+import { Input, MetaButton, MetaHeading, useToast } from '@raidguild/ds';
 import { FlexContainer } from 'components/Container';
 import { useSetupFlow } from 'contexts/SetupContext';
 import { useUpdatePlayerUsernameMutation } from 'graphql/autogen/types';

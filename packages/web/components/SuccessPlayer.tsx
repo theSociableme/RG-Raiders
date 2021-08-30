@@ -1,4 +1,4 @@
-import { Image, MetaButton, MetaHeading, Text } from '@metafam/ds';
+import { Image, MetaButton, MetaHeading, Text } from '@raidguild/ds';
 import AvatarImage from 'assets/avatar.png';
 import { FlexContainer } from 'components/Container';
 import { MetaLink } from 'components/Link';

@@ -9,7 +9,7 @@ import {
   MetaTileHeader,
   Text,
   VStack,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { MetaLink } from 'components/Link';
 import { GuildFragmentFragment } from 'graphql/autogen/types';
 import React from 'react';

@@ -5,7 +5,7 @@ import {
   SelectSearch,
   selectStyles,
   useToast,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { FlexContainer } from 'components/Container';
 import { useSetupFlow } from 'contexts/SetupContext';
 import {

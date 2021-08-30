@@ -7,7 +7,7 @@ import {
   motion,
   Stack,
   useDisclosure,
-} from '@metafam/ds';
+} from '@raidguild/ds';
 import { MetaLink } from 'components/Link';
 import { LoginButton } from 'components/LoginButton';
 import { Ticker } from 'components/Ticker';
